@@ -67,6 +67,10 @@ In order to create the needed .side files the Selenium IDE plugin must be instal
 2. Save the test to the disk
 3. run `side2capybara path/to/saved/*.side`
 
+## Translation contribution
+
+The translations for minitest are currently placed in `lib/side_to_capybara/minitest.rb`. Feel free to add more or update the existing translations. To add a new translation open the `.side` file in your favourite text editor. It's a JSON file. Search for the command you want to add and define a new method with the name of the command in `minitest.rb`. For a more detailed description of how to add a new command translation please look at the `minitest.rb` file.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

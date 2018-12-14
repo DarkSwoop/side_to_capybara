@@ -11,6 +11,10 @@ module SideToCapybara
         "find('#{selector}').double_click"
       when 'id'
         "find('##{selector}').double_click"
+      when 'xpath'
+        "find('#{selector}').double_click"
+      when 'name'
+        "find('[name=\"#{selector}\"]').double_click"
       end
     end
 
@@ -20,8 +24,12 @@ module SideToCapybara
         "find('#{selector}').click"
       when 'id'
         "find('##{selector}').click"
+      when 'xpath'
+        "find('#{selector}').click"
+      when 'name'
+        "find('[name=\"#{selector}\"]').click"
       when 'linkText'
-        "click_on('#{selector}')"
+        "click_link_or_button('#{selector}')"
       end
     end
 

@@ -43,11 +43,15 @@ module SideToCapybara
       method_id = command.gsub(/([a-z])([A-Z])/, '\1_\2').downcase
       if self.class.public_method_defined?(method_id)
         # the translation itself
-        translation = [public_send(method_id)]
+        translation = public_send(method_id)
+        return "# WARNING: '#{command}' found but the selector_type '#{selector_type}' is unhandled." if translation.nil?
 
-        # add the alternative selectors as comments
-        translation.unshift(commented_targets.join("\n")) if targets.size > 1
-        translation.join("\n")
+        # add the alternative selectors as comments if present
+        if targets.size > 1
+          "#{commented_targets.join("\n")}\n#{translation}"
+        else
+          translation
+        end
       else
         "# WARNING: Conversion for '#{command}' not found."
       end

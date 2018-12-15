@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Benjamin Behr"]
   spec.email         = ["benny@digitalbehr.de"]
 
-  spec.summary       = %q{Translate .side files to capybara tests}
-  spec.homepage      = "https://github.com/DarkSwoop/side_to_capybara"
+  spec.summary       = %q{This gem has been renamed to selenium_to_capybara and will no longer be updated.}
+  spec.homepage      = "https://github.com/DarkSwoop/selenium_to_capybara"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

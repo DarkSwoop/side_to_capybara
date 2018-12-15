@@ -21,4 +21,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
+
+  spec.post_install_message = <<-MESSAGE
+  !    The 'side_to_capybara' gem has been deprecated and has been replaced by 'selenium_to_capybara'.
+  !    See: https://rubygems.org/gems/selenium_to_capybara
+  !    And: https://github.com/DarkSwoop/selenium_to_capybara
+  MESSAGE
 end

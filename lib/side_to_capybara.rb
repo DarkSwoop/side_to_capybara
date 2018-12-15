@@ -2,6 +2,8 @@ require "side_to_capybara/version"
 require 'side_to_capybara/base'
 require 'side_to_capybara/minitest'
 
+warn "[DEPRECATION] This gem has been renamed to selenium_to_capybara and will no longer be supported. Please switch to selenium_to_capybara as soon as possible."
+
 module SideToCapybara
 
   def self.to_minitest(name, commands)
